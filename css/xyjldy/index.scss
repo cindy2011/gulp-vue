@@ -1,0 +1,61 @@
+@import "../common/common.scss";
+
+$w:720/2/16rem;
+
+
+// 背景
+@mixin bgs($height,$str){
+  height:rem($height);
+  background:url(/images/xyjldy/#{$str}) no-repeat center;
+  background-size:100% 100%;
+}
+
+// 按钮
+@mixin btns($width,$height,$bg,$color,$fs,$br){
+  width:rem($width);
+  height:rem($height);
+  line-height:rem($height);
+  background:$bg;
+  color:$color;
+  font-size:rem($fs);
+  border-radius:rem($br);
+  -webkit-border-radius:rem($br);
+  text-align:center;
+}
+
+// 文字
+@mixin texts($color,$fs){
+  color:$color;
+  font-size:rem($fs);
+}
+
+// return rem 
+@function rem($num){
+  @return $num/2/$w;
+}
+
+@mixin bx{
+   box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;-ms-box-sizing: border-box;-op-box-sizing: border-box; 
+}
+@mixin transition($a){
+    transition: $a;-webkit-transition: $a;-moz-transition: $a;-ms-transition: $a;
+}
+@mixin br($a){border-radius: $a;-webkit-border-radius: $a;-moz-border-radius: $a;-ms-border-radius: $a;}
+
+@mixin transform($str){ transform: $str; -webkit-transform: $str;-moz-transform: $str; -ms-transform: $str;}
+@mixin animation($str){
+    animation: $str;
+    -moz-animation: $str;
+    -webkit-animation:$str;
+    -ms-animation: $str;
+}
+ 
+#page{
+  @include bgs(1334,'bg.jpg');
+  .logo{
+    position: absolute;
+    left:rem(22);
+    top:rem(22);
+    width:rem(213);
+  }
+}

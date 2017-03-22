@@ -1,0 +1,110 @@
+@import "../common/common.scss";
+
+$w:750/2/16rem;
+
+
+// 背景
+@mixin bgs($height,$str){
+  height:rem($height);
+  background:url(https://download.shengli.com/logos/2017-3-15/images/#{$str}) no-repeat center;
+  background-size:100% 100%;
+}
+
+// 按钮
+@mixin btns($width,$height,$bg,$color,$fs,$br){
+  width:rem($width);
+  height:rem($height);
+  line-height:rem($height);
+  background:$bg;
+  color:$color;
+  font-size:rem($fs);
+  border-radius:rem($br);
+  -webkit-border-radius:rem($br);
+  text-align:center;
+}
+
+// 文字
+@mixin texts($color,$fs){
+  color:$color;
+  font-size:rem($fs);
+}
+
+// return rem 
+@function rem($num){
+  @return $num/2/$w;
+}
+
+@mixin bx{
+   box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;-ms-box-sizing: border-box;-op-box-sizing: border-box; 
+}
+@mixin transition($a){
+    transition: $a;-webkit-transition: $a;-moz-transition: $a;-ms-transition: $a;
+}
+@mixin br($a){border-radius: $a;-webkit-border-radius: $a;-moz-border-radius: $a;-ms-border-radius: $a;}
+
+@mixin transform($str){ transform: $str; -webkit-transform: $str;-moz-transform: $str; -ms-transform: $str;}
+@mixin animation($str){
+    animation: $str;
+    -moz-animation: $str;
+    -webkit-animation:$str;
+    -ms-animation: $str;
+}
+
+#page{
+  padding-top: rem(113);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: rem(6);
+    @include bgs(113,'header.jpg');
+    box-sizing:border-box;
+    .icon_box {
+        float: left;
+        width: rem(103);
+        overflow: hidden;
+        margin-left: rem(46);
+        margin-right: rem(16);
+        img{
+          width:100%;
+        }
+    }
+    .info {
+        float: left;
+        padding-left: rem(12);
+        padding-top: rem(14);
+        p{
+          font-size: rem(18);
+          color: #f0c500;
+          line-height:rem(40);
+        }
+    }
+    .btn_box {
+        float: right;
+        width:rem(213);
+        overflow: hidden;
+        margin:rem(20) rem(20) 0 0;
+    }
+    .download{
+      img{
+        width:rem(213);
+      }
+    }
+}
+
+.wimg{
+  display: block;
+  margin-top: rem(-3);
+  width:100%;
+}
+.footer{
+  text-align:center;
+  color:#fff;
+  background:#000;
+  font-size: rem(24);
+  line-height:rem(40);
+}
+

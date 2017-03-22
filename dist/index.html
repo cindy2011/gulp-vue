@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="keywords" content="">
+    	<meta name="description" content="">
+    	<meta content="telephone=no" name="format-detection">
+		<link rel="shortcut icon" href="http://www.shengli.com/Public/Home/five/images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/tcxt/index.css" />
+		<script src="http://download.shengli.com/www/commonjs/wap/setsize.js"></script>
+	</head>
+	<body>
+		
+		<div id="page"></div>
+		
+		<script>
+			window.imageURI = '__PIC03IMG__'
+			window.data = {"piece":6,"isSign":0,"vipPiece":0,"score":27,"buy":5,"give":1}
+			window.piece = ["0","1","2","4","7","8"]
+			window.gift  = []
+		</script>
+		<script src="/dist/bundle.js"></script>
+		
+		<script src="http://download.shengli.com/www/jquery-2.2.1.min.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="http://download.shengli.com//www/commonjs/weixin.js"></script>
+		<script type="text/javascript">
+		    if(isWeiXin()){
+		        config('{$appId}', '{$timestamp}', '{$nonceStr}', '{$signature}', '分享标题', '分享内容', '分享链接', '分享图标', function(){
+		        	//分享成功回调函数
+		        });
+		    }
+			function isWeiXin(){ 
+			  var ua = window.navigator.userAgent.toLowerCase(); 
+			  if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+			    return true; 
+			  }else{ 
+			    return false; 
+			  } 
+			}
+		</script>
+		
+	</body>
+</html>
+	

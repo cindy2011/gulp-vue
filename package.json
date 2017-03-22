@@ -1,0 +1,32 @@
+{
+  "name": "pc-dev",
+  "version": "2.0.0",
+  "description": "pc端的gulp开发工具",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "nathen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "browserify": "^14.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vue": "^2.2.2",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.2",
+    "vueify": "^9.4.1",
+    "watchify": "^3.9.0"
+  }
+}
